@@ -174,7 +174,7 @@ Inside `@@fstart` and `@@fend`, every lineâ€”including those starting with `//`â
 
 ---
 
-## Template Assistant
+# Template Assistant
 
 FeatureGen includes an optional AI-powered Telegram assistant that helps you create `.featuregen` templates by describing the files and structure you want to generate.
 
@@ -192,5 +192,5 @@ Useful for:
 ---
 
 
-## License
+# License
 [MIT License](LICENSE)
