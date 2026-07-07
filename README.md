@@ -36,13 +36,9 @@ Template:
 @@fstart
 package ~<<package>>.~<<snakeCaseName>>.di
 
-import ~<<package>>.~<<snakeCaseName>>.presentation.~<<shortName>>ScreenMapper
-import ~<<package>>.~<<snakeCaseName>>.presentation.~<<shortName>>ScreenMapperImpl
 import ~<<package>>.~<<snakeCaseName>>.presentation.~<<shortName>>ViewModel
 
 val ~<<shortName>>Module = module {
-
-    singleOf(::~<<shortName>>ScreenMapperImpl) bind ~<<shortName>>ScreenMapper::class
 
     viewModelOf(::~<<shortName>>ViewModel)
 }
@@ -54,29 +50,25 @@ Run:
 ```sh
 ./featuregen template.featuregen \
     package=foo.bar \
-    fullName=FeatureTest
+    fullName=FeatureLogin
 ```
 
 Generated file:
 
 ```
-foo/bar/feature_test/di/TestModule.kt
+foo/bar/feature_login/di/LoginModule.kt
 ```
 
 Contents:
 
 ```kotlin
-package foo.bar.feature_test.di
+package foo.bar.feature_login.di
 
-import foo.bar.feature_test.presentation.TestScreenMapper
-import foo.bar.feature_test.presentation.TestScreenMapperImpl
-import foo.bar.feature_test.presentation.TestViewModel
+import foo.bar.feature_login.presentation.LoginViewModel
 
-val TestModule = module {
+val LoginModule = module {
 
-    singleOf(::TestScreenMapperImpl) bind TestScreenMapper::class
-
-    viewModelOf(::TestViewModel)
+    viewModelOf(::LoginViewModel)
 }
 ```
 
