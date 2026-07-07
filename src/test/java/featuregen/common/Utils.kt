@@ -63,4 +63,4 @@ internal fun assertDirectoriesMatch(expectedDir: File, actualDir: File) {
     }
 }
 
-private const val FEATUREGEN_PATH = "src/main/featuregen.sh"
+private const val FEATUREGEN_PATH = "featuregen.sh"
