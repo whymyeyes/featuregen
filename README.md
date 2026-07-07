@@ -152,6 +152,26 @@ Hello
 
 ---
 
+## Comments
+
+Lines starting with `//` outside file blocks are treated as comments and ignored by the generator.
+
+```text
+// This is a comment
+
+@expect package
+
+@file path=src/~<<packagePath>>/Example.kt
+
+@@fstart
+// This comment will be written to the generated file.
+@@fend
+```
+
+Inside `@@fstart` and `@@fend`, every line—including those starting with `//`—is treated as file content.
+
+---
+
 
 ## License
 [MIT License](LICENSE)
