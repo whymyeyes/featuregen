@@ -1,0 +1,6 @@
+@let packagePath = pathFromPackage(com.example.v2_feature.internal_data)
+
+@file path=result.txt
+@@fstart
+~<<packagePath>>
+@@fend

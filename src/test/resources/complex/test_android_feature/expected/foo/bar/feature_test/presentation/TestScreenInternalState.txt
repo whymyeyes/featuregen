@@ -1,0 +1,13 @@
+package foo.bar.feature_test.presentation
+
+internal data class TestScreenInternalState(
+    val str: String,
+) {
+    companion object {
+
+        val empty: TestScreenInternalState
+            get() = TestScreenInternalState(
+                str = "",
+            )
+    }
+}

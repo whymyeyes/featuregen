@@ -1,0 +1,6 @@
+@let version = featuregenVersion()
+
+@file path=result.txt
+@@fstart
+~<<version>>
+@@fend

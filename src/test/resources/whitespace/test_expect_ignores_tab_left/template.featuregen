@@ -1,0 +1,6 @@
+@expect 	y
+
+@file path=result.txt
+@@fstart
+~<<y>>
+@@fend

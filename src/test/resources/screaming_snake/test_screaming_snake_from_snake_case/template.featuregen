@@ -1,0 +1,6 @@
+@let screamingSnakeCase = screamingSnake(screaming_snake)
+
+@file path=result.txt
+@@fstart
+~<<screamingSnakeCase>>
+@@fend

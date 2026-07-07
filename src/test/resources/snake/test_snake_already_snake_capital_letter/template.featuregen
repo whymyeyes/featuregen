@@ -1,0 +1,6 @@
+@let snakeCase = snake(Already_Snake)
+
+@file path=result.txt
+@@fstart
+~<<snakeCase>>
+@@fend

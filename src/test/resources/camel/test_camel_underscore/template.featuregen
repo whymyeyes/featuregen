@@ -1,0 +1,6 @@
+@let camelCaseName = camel(JSON_parser)
+
+@file path=result.txt
+@@fstart
+~<<camelCaseName>>
+@@fend

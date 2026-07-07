@@ -1,0 +1,6 @@
+@let screamingSnakeCase = screamingSnake(XMLHttpRequest)
+
+@file path=result.txt
+@@fstart
+~<<screamingSnakeCase>>
+@@fend

@@ -1,0 +1,19 @@
+@expect package
+@expect fullName
+
+@let shortName = extractIgnoringCase(fullName, Feature)
+@let snakeCaseName = snake(fullName)
+@let camelCaseName = camel(fullName)
+@let packagePath = pathFromPackage(package)
+
+@file path=~<<packagePath>>/~<<snakeCaseName>>/di/~<<shortName>>Module.txt
+@@fstart
+package ~<<package>>.~<<snakeCaseName>>.di
+
+import ~<<package>>.~<<snakeCaseName>>.presentation.~<<shortName>>ViewModel
+import org.koin.dsl.module
+
+val ~<<shortName>>Module = module {
+    viewModelOf(::~<<shortName>>ViewModel)
+}
+@@fend

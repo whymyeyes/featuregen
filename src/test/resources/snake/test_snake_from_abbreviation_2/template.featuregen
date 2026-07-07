@@ -1,0 +1,6 @@
+@let snakeCase = snake(XMLHttpRequest)
+
+@file path=result.txt
+@@fstart
+~<<snakeCase>>
+@@fend

@@ -1,0 +1,6 @@
+@let camelCaseName = camel(myNewVariable)
+
+@file path=result.txt
+@@fstart
+~<<camelCaseName>>
+@@fend

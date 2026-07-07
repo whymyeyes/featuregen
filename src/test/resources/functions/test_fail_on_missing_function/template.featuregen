@@ -1,0 +1,6 @@
+@let v =
+
+@file path=result.txt
+@@fstart
+~<<v>>
+@@fend

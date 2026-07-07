@@ -1,0 +1,32 @@
+package foo.bar.feature_test.presentation
+
+import androidx.lifecycle.ViewModel
+import androidx.lifecycle.viewModelScope
+import kotlinx.coroutines.channels.Channel
+import kotlinx.coroutines.flow.MutableStateFlow
+import kotlinx.coroutines.flow.SharingStarted
+import kotlinx.coroutines.flow.StateFlow
+import kotlinx.coroutines.flow.map
+import kotlinx.coroutines.flow.receiveAsFlow
+import kotlinx.coroutines.flow.stateIn
+import kotlinx.coroutines.flow.update
+import kotlinx.coroutines.launch
+
+internal class TestViewModel(
+    screenMapper: TestScreenMapper,
+) : ViewModel() {
+
+    private val internalState = MutableStateFlow(TestScreenInternalState.empty)
+
+    private val _sideEffects = Channel<TestScreenSideEffect>()
+    val sideEffects = _sideEffects.receiveAsFlow()
+
+    val uiState: StateFlow<TestScreenViewState> =
+        internalState
+            .map(screenMapper::toViewState)
+            .stateIn(
+                scope = viewModelScope,
+                started = SharingStarted.WhileSubscribed(5_000),
+                initialValue = screenMapper.toViewState(internalState.value),
+            )
+}

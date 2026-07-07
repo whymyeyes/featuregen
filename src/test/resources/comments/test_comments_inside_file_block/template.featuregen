@@ -1,0 +1,4 @@
+@file path=result.txt
+@@fstart
+// this is a comment
+@@fend

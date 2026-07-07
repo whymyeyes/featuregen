@@ -1,0 +1,6 @@
+@let snakeCase = snake(JSONParser)
+
+@file path=result.txt
+@@fstart
+~<<snakeCase>>
+@@fend

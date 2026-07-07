@@ -1,0 +1,6 @@
+@let  x = snake(value)
+
+@file path=result.txt
+@@fstart
+~<<x>>
+@@fend

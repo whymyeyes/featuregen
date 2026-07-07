@@ -1,0 +1,4 @@
+package foo.bar.feature_test.presentation
+
+internal sealed interface TestScreenSideEffect {
+}

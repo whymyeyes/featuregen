@@ -1,0 +1,15 @@
+package foo.bar.feature_test.presentation
+
+internal interface TestScreenMapper {
+
+    fun toViewState(internalState: TestScreenInternalState): TestScreenViewState
+}
+
+internal class TestScreenMapperImpl : TestScreenMapper {
+
+    override fun toViewState(internalState: TestScreenInternalState): TestScreenViewState {
+        return TestScreenViewState(
+            str = internalState.str,
+        )
+    }
+}

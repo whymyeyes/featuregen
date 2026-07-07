@@ -1,0 +1,6 @@
+@let packagePath = pathFromPackage(kesa.ne.treba)
+
+@file path=result.txt
+@@fstart
+~<<packagePath>>
+@@fend

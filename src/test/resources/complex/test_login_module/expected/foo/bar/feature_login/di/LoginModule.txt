@@ -1,0 +1,8 @@
+package foo.bar.feature_login.di
+
+import foo.bar.feature_login.presentation.LoginViewModel
+import org.koin.dsl.module
+
+val LoginModule = module {
+    viewModelOf(::LoginViewModel)
+}

@@ -1,0 +1,9 @@
+@file path=file1.txt
+@@fstart
+Hello from file 1!
+@@fend
+
+@file path=file2.txt
+@@fstart
+Hello from file 2!
+@@fend

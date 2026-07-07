@@ -1,0 +1,6 @@
+@let snakeCase = snake( With Spaces )
+
+@file path=result.txt
+@@fstart
+~<<snakeCase>>
+@@fend

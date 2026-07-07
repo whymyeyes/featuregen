@@ -1,0 +1,6 @@
+@let snakeCase = snake(MayTheForceBeWithYou)
+
+@file path=result.txt
+@@fstart
+~<<snakeCase>>
+@@fend

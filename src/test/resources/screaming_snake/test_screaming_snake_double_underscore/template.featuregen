@@ -1,0 +1,6 @@
+@let screamingSnakeCase = screamingSnake(__Intoxicated__With_Madness__)
+
+@file path=result.txt
+@@fstart
+~<<screamingSnakeCase>>
+@@fend

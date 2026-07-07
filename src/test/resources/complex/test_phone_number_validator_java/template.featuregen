@@ -1,0 +1,31 @@
+@expect package
+@expect fullName
+
+@let shortName = extractIgnoringCase(fullName, Validator)
+@let screamingSnakeName = screamingSnake(shortName)
+@let camelCaseName = camel(shortName)
+@let packagePath = pathFromPackage(package)
+
+@file path=~<<packagePath>>/validators/~<<shortName>>Validator.txt
+@@fstart
+package ~<<package>>.validators;
+
+import java.util.regex.Matcher;
+import java.util.regex.Pattern;
+
+public class ~<<shortName>>Validator {
+
+    private static final String ~<<screamingSnakeName>>_REGEXP = "";
+    private static final Pattern ~<<screamingSnakeName>>_PATTERN = Pattern.compile(~<<screamingSnakeName>>_REGEXP);
+
+    public static boolean is~<<shortName>>Valid(final String ~<<camelCaseName>>) {
+
+        if (~<<camelCaseName>> == null) {
+            return false;
+        }
+
+        Matcher matcher = ~<<screamingSnakeName>>_PATTERN.matcher(~<<camelCaseName>>);
+        return matcher.matches();
+    }
+}
+@@fend

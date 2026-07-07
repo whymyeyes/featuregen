@@ -1,0 +1,5 @@
+package foo.bar.feature_test.presentation
+
+internal data class TestScreenViewState(
+    val str: String,
+)

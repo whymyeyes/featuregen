@@ -1,0 +1,6 @@
+@let shortName = extractIgnoringCase(Hello World, hello)
+
+@file path=result.txt
+@@fstart
+~<<shortName>>
+@@fend

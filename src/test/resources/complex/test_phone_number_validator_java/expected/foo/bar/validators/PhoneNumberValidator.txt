@@ -1,0 +1,20 @@
+package foo.bar.validators;
+
+import java.util.regex.Matcher;
+import java.util.regex.Pattern;
+
+public class PhoneNumberValidator {
+
+    private static final String PHONE_NUMBER_REGEXP = "";
+    private static final Pattern PHONE_NUMBER_PATTERN = Pattern.compile(PHONE_NUMBER_REGEXP);
+
+    public static boolean isPhoneNumberValid(final String phoneNumber) {
+
+        if (phoneNumber == null) {
+            return false;
+        }
+
+        Matcher matcher = PHONE_NUMBER_PATTERN.matcher(phoneNumber);
+        return matcher.matches();
+    }
+}

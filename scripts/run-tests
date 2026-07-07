@@ -1,0 +1,8 @@
+#!/bin/bash
+
+docker run --rm -t \
+  -v gradle-cache-volume:/root/.gradle \
+  -v "$PWD":/app \
+  -w /app \
+  minimumy/gradle:8.14.4-jdk17-temurin-noble \
+  gradle clean test --no-daemon --no-build-cache --rerun-tasks

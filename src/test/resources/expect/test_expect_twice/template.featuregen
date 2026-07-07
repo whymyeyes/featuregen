@@ -1,0 +1,7 @@
+@expect feature
+@expect feature
+
+@file path=result.txt
+@@fstart
+~<<feature>>
+@@fend

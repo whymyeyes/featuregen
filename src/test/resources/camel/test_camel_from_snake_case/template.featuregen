@@ -1,0 +1,6 @@
+@let userProfileCaseName = camel(user_profile_data)
+
+@file path=result.txt
+@@fstart
+~<<userProfileCaseName>>
+@@fend

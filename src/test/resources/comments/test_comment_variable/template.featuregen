@@ -1,0 +1,7 @@
+@let camelCaseVar = camel(unaffected)
+//@let camelCaseVar = camel(affected)
+
+@file path=result.txt
+@@fstart
+~<<camelCaseVar>>
+@@fend

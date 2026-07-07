@@ -1,0 +1,6 @@
+@let excuseMe = camel(entschuldigung)
+
+@file path=result.txt
+@@fstart
+// ~<<excuseMe>> bitte!
+@@fend
