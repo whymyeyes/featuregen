@@ -7,7 +7,7 @@
 @let packagePath = pathFromPackage(package)
 @let version = featuregenVersion()
 
-@file path=~<<packagePath>>/~<<snakeCaseName>>/di/~<<shortName>>Module.kt
+@file path=~<<packagePath>>/~<<snakeCaseName>>/di/~<<shortName>>Module.txt
 @@fstart
 package ~<<package>>.~<<snakeCaseName>>.di
 
