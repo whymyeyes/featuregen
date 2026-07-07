@@ -6,6 +6,8 @@ Simple code generation without Python, Node.js, or external dependencies.
 
 It transforms template files into one or more source files using a small, purpose-built template language.
 
+Need help creating a template? Use the optional AI-powered [Telegram assistant](https://t.me/featuregen_bot) to generate a starting point.
+
 The repository contains the Featuregen engine itself (implemented as a POSIX shell script) together with a comprehensive automated test suite written in Kotlin and JUnit, making the project easy to verify and extend.
 
 ## Features
@@ -169,6 +171,23 @@ Lines starting with `//` outside file blocks are treated as comments and ignored
 ```
 
 Inside `@@fstart` and `@@fend`, every line—including those starting with `//`—is treated as file content.
+
+---
+
+## Template Assistant
+
+FeatureGen includes an optional AI-powered Telegram assistant that helps you create `.featuregen` templates by describing the files and structure you want to generate.
+
+Describe what you want to build, or provide a code snippet, and the bot will help you create the corresponding template.
+
+Useful for:
+
+- bootstrapping a ready-to-run Featuregen setup (script + template)
+- creating new templates
+
+➡️ Use the bot here: [@featuregen_bot](https://t.me/featuregen_bot)
+
+> Note: The bot is an external tool and is not required to use FeatureGen.
 
 ---
 
