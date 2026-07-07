@@ -1,0 +1,7 @@
+@let packagePath = pathFromPackage(zdravo.brate)
+
+@file path=result.txt
+//@file path=~<<packagePath>>/result2.txt
+@@fstart
+Dobro dosli!
+@@fend
