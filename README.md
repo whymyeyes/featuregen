@@ -50,7 +50,7 @@ val ~<<shortName>>Module = module {
 Run:
 
 ```sh
-./featuregen.sh template.featuregen \
+./featuregen template.featuregen \
     package=foo.bar \
     fullName=FeatureTest
 ```
